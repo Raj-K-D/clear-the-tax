@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PF Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PF Calculator - Employee Provident Fund</h1>
+        <form id="pfForm">
+            <div class="form-group">
+                <label for="monthlyInvestment">Monthly PF Investment (₹)</label>
+                <input type="number" id="monthlyInvestment" placeholder="Enter Monthly Investment" required>
+            </div>
+            <div class="form-group">
+                <label for="interestRate">Current PF Interest Rate (%)</label>
+                <input type="number" id="interestRate" placeholder="Enter Interest Rate" value="8.25" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration of Investment (Years)</label>
+                <input type="number" id="duration" placeholder="Enter Duration in Years" value="15" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency of Investment</label>
+                <select id="frequency" required>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Quarterly">Quarterly</option>
+                    <option value="Half-Yearly">Half-Yearly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculatePF()">Calculate PF Maturity</button>
+        </form>
+
+        <div id="result">
+            <h2>PF Maturity Amount: ₹<span id="maturityAmount">0.00</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

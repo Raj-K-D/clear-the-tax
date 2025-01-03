@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Income Tax Return Form</h2>
+
+        <form id="itrForm">
+            <section>
+                <h3>Income from Salaries</h3>
+                <label>Employer-1:</label>
+                <input type="text" id="employer1" placeholder="Employer 1" required><br>
+
+                <label>Salary (Employer 1):</label>
+                <input type="number" id="salary1" placeholder="Salary from Employer 1" required><br>
+
+                <label>Employer-2:</label>
+                <input type="text" id="employer2" placeholder="Employer 2"><br>
+
+                <label>Salary (Employer 2):</label>
+                <input type="number" id="salary2" placeholder="Salary from Employer 2"><br>
+
+                <label>Total Salary:</label>
+                <input type="number" id="totalSalary" placeholder="Total Salary" readonly><br>
+
+                <label>Standard Deduction:</label>
+                <input type="number" id="standardDeduction" value="50000" readonly><br>
+            </section>
+
+            <section>
+                <h3>Income from Other Sources</h3>
+                <label>Medical Insurance Premium (80D):</label>
+                <input type="number" id="medInsurance" placeholder="Medical Insurance Premium"><br>
+
+                <label>Investment (80C):</label>
+                <input type="number" id="investment" placeholder="Investment (80C)"><br>
+
+                <label>Total Income:</label>
+                <input type="number" id="totalIncome" placeholder="Total Income" readonly><br>
+            </section>
+
+            <section>
+                <h3>Assessee Information</h3>
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="Name" required><br>
+
+                <label>PAN:</label>
+                <input type="text" id="pan" placeholder="PAN" required><br>
+
+                <label>Return Type:</label>
+                <select id="returnType">
+                    <option value="Original">Original</option>
+                    <option value="Revised">Revised</option>
+                </select><br>
+
+                <label>Filing Section (139):</label>
+                <input type="text" id="section139" value="139" readonly><br>
+            </section>
+
+            <button type="button" onclick="calculateTotal()">Calculate Total</button>
+            <button type="button" onclick="downloadJSON()">Download JSON</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

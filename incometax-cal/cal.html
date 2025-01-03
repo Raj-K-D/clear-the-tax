@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Income Tax Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Income Tax Calculator</h1>
+        <form id="tax-form">
+            <label for="itr-type">Type of ITR:</label>
+            <select id="itr-type">
+                <option value="updated">Updated Return u/s 139(8A)</option>
+                <option value="other">Other than Updated Return</option>
+            </select>
+
+            <label for="tax-regime">Tax Regime:</label>
+            <select id="tax-regime">
+                <option value="old">Old Tax Regime</option>
+                <option value="new">New Tax Regime</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <select id="age">
+                <option value="below60">Below 60 years</option>
+                <option value="60-79">60-79 years</option>
+                <option value="80above">80 years and above</option>
+            </select>
+
+            <label for="residential-status">Residential Status:</label>
+            <select id="residential-status">
+                <option value="resident">Resident</option>
+                <option value="non-resident">Non-Resident</option>
+            </select>
+
+            <label for="assessment-year">Assessment Year:</label>
+            <input type="number" id="assessment-year" placeholder="Enter year" required>
+
+            <label for="income">Total Income:</label>
+            <input type="number" id="income" placeholder="Enter your income" required>
+
+            <label for="deductions">Deductions:</label>
+            <input type="number" id="deductions" placeholder="Enter your deductions" required>
+
+            <button type="submit">Calculate Tax</button>
+        </form>
+
+        <h2 id="result"></h2>
+
+        <canvas id="taxChart" width="400" height="400"></canvas>
+    </div>
+
+    <!-- Include Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

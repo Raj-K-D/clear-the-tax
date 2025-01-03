@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Filing Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ITR Filing Form</h2>
+        <form id="itrForm">
+            <section>
+                <h3>Personal Information</h3>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+
+                <label for="middleName">Middle Name:</label>
+                <input type="text" id="middleName">
+
+                <label for="surNameOrOrgName">Surname or Organization Name:</label>
+                <input type="text" id="surNameOrOrgName" required>
+
+                <label for="pan">PAN:</label>
+                <input type="text" id="pan" required>
+
+                <label for="aadhaarCardNo">Aadhaar Card No:</label>
+                <input type="text" id="aadhaarCardNo">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <label for="mobileNo">Mobile No:</label>
+                <input type="tel" id="mobileNo" required>
+
+                <label for="emailAddress">Email Address:</label>
+                <input type="email" id="emailAddress" required>
+            </section>
+
+            <section>
+                <h3>Address</h3>
+                <label for="residenceName">Residence Name:</label>
+                <textarea id="residenceName" required></textarea>
+
+                <label for="cityOrTownOrDistrict">City or Town or District:</label>
+                <input type="text" id="cityOrTownOrDistrict" required>
+
+                <label for="stateCode">State Code:</label>
+                <input type="text" id="stateCode" required>
+
+                <label for="pinCode">Pin Code:</label>
+                <input type="number" id="pinCode" required>
+            </section>
+
+            <section>
+                <h3>Income Details</h3>
+                <label for="grossSalary">Gross Salary:</label>
+                <input type="number" id="grossSalary" required>
+
+                <label for="netSalary">Net Salary:</label>
+                <input type="number" id="netSalary" required>
+
+                <label for="incomeFromOtherSources">Income from Other Sources:</label>
+                <input type="number" id="incomeFromOtherSources">
+            </section>
+
+            <section>
+                <h3>Tax Deductions</h3>
+                <label for="section80C">Section 80C:</label>
+                <input type="number" id="section80C">
+
+                <label for="section80D">Section 80D:</label>
+                <input type="number" id="section80D">
+
+                <label for="section80TTA">Section 80TTA:</label>
+                <input type="number" id="section80TTA">
+            </section>
+
+            <button type="button" onclick="generateJSON()">Download JSON</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

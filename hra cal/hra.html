@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>House Rent Allowance (HRA) Calculator</h1>
+        <form id="hraForm">
+            <div class="form-group">
+                <label for="basicSalary">Basic Salary</label>
+                <input type="number" id="basicSalary" placeholder="Enter Basic Salary" required>
+            </div>
+            <div class="form-group">
+                <label for="dearnessAllowance">Dearness Allowance</label>
+                <input type="number" id="dearnessAllowance" placeholder="Enter Dearness Allowance">
+            </div>
+            <div class="form-group">
+                <label for="commission">Commission</label>
+                <input type="number" id="commission" placeholder="Enter Commission">
+            </div>
+            <div class="form-group">
+                <label for="hraReceived">HRA Received</label>
+                <input type="number" id="hraReceived" placeholder="Enter HRA Received" required>
+            </div>
+            <div class="form-group">
+                <label for="annualRent">Annual Rent Paid</label>
+                <input type="number" id="annualRent" placeholder="Enter Annual Rent Paid" required>
+            </div>
+            <button type="button" onclick="calculateHRA()">Calculate HRA</button>
+        </form>
+
+        <div id="result">
+            <h2>Effective Returns:</h2>
+            <p>HRA Received: ₹<span id="hraReceivedDisplay">0</span></p>
+            <p>Exempted HRA: ₹<span id="exemptedHraDisplay">0</span></p>
+            <p>Taxable HRA: ₹<span id="taxableHraDisplay">0</span></p>
+        </div>
+
+        <canvas id="hraChart" width="400" height="300"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
