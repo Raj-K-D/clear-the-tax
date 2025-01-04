@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select ITR Form</title>
+    <link rel="stylesheet" href="itr-m.css">
+</head>
+<body>
+
+<header>
+    <h1>ITR Form Selection</h1>
+    <p class="subtitle">Choose the appropriate Income Tax Return form</p>
+</header>
+
+<div class="container">
+    <section class="form-options">
+        <a href="itr form1/itr.html">
+        <div class="form-item" onclick="selectForm('ITR1')" title="ITR1 - For salaried individuals">
+            <img src="itr1.png" alt="ITR1 Icon" class="form-icon">
+            <h3>ITR1</h3>
+            <p>For salaried individuals with income up to ₹50 lakhs.</p>
+        </a>
+        </div>
+        <a href="itr form2/itr1.html">
+        <div class="form-item" onclick="selectForm('ITR2')" title="ITR2 - For individuals and HUFs">
+            <img src="itr2.png" alt="ITR2 Icon" class="form-icon">
+            <h3>ITR2</h3>
+            <p>For individuals and HUFs not having income from business or profession.</p>
+        </a>
+        </div>
+    </section>
+</div>
+
+<script>
+    function selectForm(form) {
+        alert("You have selected " + form + ".");
+        // You can redirect or process based on the selection:
+        // window.location.href = form.toLowerCase() + ".html";
+    }
+</script>
+
+</body>
+</html>

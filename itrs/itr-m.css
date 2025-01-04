@@ -1,0 +1,107 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #e0f7fa, #e0f2f1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling since everything is fixed */
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fix the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: slideIn 1s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #e3f2fd;
+    margin-top: 5px;
+}
+
+/* Container */
+.container {
+    position: fixed; /* Fix the form selection section */
+    top: 120px; /* Leave space for the header */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    height: calc(100vh - 120px); /* Full height minus header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling within the container if content overflows */
+    padding: 20px;
+}
+
+/* Form Options Section */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.form-item {
+    width: 45%;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #f0f9ff, #e0f2f1);
+}
+
+.form-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom right, #e3f2fd, #cfd8dc);
+}
+
+.form-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.form-item h3 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.form-item p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-item {
+        width: 100%;
+    }
+}
