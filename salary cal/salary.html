@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="salary.css">
+  <title>Salary Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Salary Calculator</h1>
+    <form id="salaryForm">
+      <label for="ctc">Cost to Company (CTC):</label>
+      <input type="number" id="ctc" name="ctc" required>
+
+      <label for="bonusType">Bonus Type:</label>
+      <select id="bonusType" name="bonusType">
+        <option value="percentage">Percentage</option>
+        <option value="fixed">Fixed Amount</option>
+      </select>
+
+      <label for="bonusInCTC">Bonus Include in CTC:</label>
+      <input type="number" id="bonusInCTC" name="bonusInCTC" placeholder="Enter bonus value" required>
+
+      <label for="monthlyPT">Monthly Professional Tax:</label>
+      <input type="number" id="monthlyPT" name="monthlyPT" required>
+
+      <label for="employerPF">Monthly Employer PF:</label>
+      <input type="number" id="employerPF" name="employerPF" required>
+
+      <label for="employeePF">Monthly Employee PF:</label>
+      <input type="number" id="employeePF" name="employeePF" required>
+
+      <label for="additionalDeduction">Monthly Additional Deduction (Optional):</label>
+      <input type="number" id="additionalDeduction" name="additionalDeduction">
+
+      <button type="button" id="calculateButton">Calculate</button>
+    </form>
+
+    <div id="results">
+      <h2>Results</h2>
+      <p>Total Monthly Deduction: <span id="monthlyDeduction"></span></p>
+      <p>Total Annual Deduction: <span id="annualDeduction"></span></p>
+      <p>Take Home Monthly Salary: <span id="monthlyTakeHome"></span></p>
+      <p>Take Home Annual Salary: <span id="annualTakeHome"></span></p>
+    </div>
+
+    <canvas id="salaryChart"></canvas>
+  </div>
+  <script src="salary.js"></script>
+</body>
+</html>

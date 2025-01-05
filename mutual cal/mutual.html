@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Returns Calculator</title>
+    <link rel="stylesheet" href="mutual.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Mutual Fund Returns Calculator</h1>
+        <form id="mf-form">
+            <label for="investment">Total Investment (₹):</label>
+            <input type="number" id="investment" placeholder="Enter investment amount" required>
+
+            <label for="returnRate">Expected Return Rate (% p.a.):</label>
+            <input type="number" id="returnRate" placeholder="Enter return rate" required>
+
+            <label for="timePeriod">Time Period (Years):</label>
+            <input type="number" id="timePeriod" placeholder="Enter time period" required>
+
+            <button type="button" onclick="calculateReturns()">Calculate</button>
+        </form>
+
+        <div id="results">
+            <h2>Results:</h2>
+            <p>Invested Amount: <span id="investedAmount"></span></p>
+            <p>Estimated Returns: <span id="estimatedReturns"></span></p>
+            <p>Total Value: <span id="totalValue"></span></p>
+            <canvas id="returnsChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="mutual.js"></script>
+</body>
+</html>
